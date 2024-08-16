@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Language Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='indexStyle.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+     <header>
+        <div id="mainblock">
+            <div id="leftblock">
+                <p id="headName" style="font-size: 40px; font-weight: 400;">Hands in Harmony!!</p>
+                <p>Welcome to the communication revolution!</p>
+            </div> 
+            <div id="rightblock">
+                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcT-GcUx8-cg6UBNXe4qzac3BS8F9keLcwjGo2kbOAwYFf3k7_4S">
+            </div>
+        </div>
+    </header>
+    <section id="maincontent">
+        <div><img></div>
+        <div><p></p></div>
+    </section>
+    <div class="section container">
+        <form id="Upload">
+            <input type="text" id="entertext" placeholder="Enter text to be translated" name="text-to-be-translated"><br>
+            <input type="button" value="Translate" onclick="translateText()">
+        </form>
+        <div class="vertical-line"></div>
+        <div class="text-col">
+            <h2>Translation is now just a click away!</h2>
+            <h5>
+                <ul>
+                    <li>Enter any text to be translated</li><br>
+                    <li>Click on the 'Translate' button</li><br>
+                    <li>And voila! You get a translation in real time!</li><br>
+                </ul>
+            </h5>
+        </div>
+    </div>
+    <div class="modal fade" id="translatedImagesModal">
+        <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="background-color: #373737;">
+            <div class="modal-header" style="background-color: #373737;">
+            <h5 class="modal-title" id="translatedImagesModalLabel" style="color: beige; font-family: 'Poppins';">Translated Images</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: beige;"></button>
+            </div>
+            <div class="modal-body" id="modalBody">
+            </div>
+        </div>
+        </div>
+    </div>
+  
+    <!-- <div id="translated-images"></div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='FormSubmit.js') }}"></script>
+</body>
+</html>
